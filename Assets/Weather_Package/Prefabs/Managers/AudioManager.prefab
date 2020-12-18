@@ -423,7 +423,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 721976623184376449515779135bc582, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -561,6 +561,7 @@ MonoBehaviour:
   OtherAudio: {fileID: 3028767891773308668}
   clip_birds: {fileID: 8300000, guid: 721976623184376449515779135bc582, type: 3}
   clip_wind: {fileID: 8300000, guid: a05c0c23d8d4f7146911214f16bff11a, type: 3}
+  clip_snowWind: {fileID: 8300000, guid: c1f5907a310f1ec4699afc5039d14534, type: 3}
   clip_lightRian: {fileID: 8300000, guid: 9ca8e7912aabd0d43b02754cf3d8001e, type: 3}
   clip_HeavyRian: {fileID: 8300000, guid: 51d14d343629f6644a28f4eaaf504090, type: 3}
   clip_CloseTunder: {fileID: 8300000, guid: 28b905fc5e24e6f4d8cad85fe889863a, type: 3}
