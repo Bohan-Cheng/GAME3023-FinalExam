@@ -78,8 +78,8 @@ public class Script_AudioManager : MonoBehaviour
                 break;
             case EWeather.Snow:
                 StopAllAudio();
-                AmbientAudio.clip = clip_snowWind;
-                AmbientAudio.Play();
+                OtherAudio.clip = clip_snowWind;
+                OtherAudio.Play();
                 break;
         }
     }

@@ -223,6 +223,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 145869196219773690, guid: c217ae5b9d2db1b42bad75aa53fa3949, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 145869196219773693, guid: c217ae5b9d2db1b42bad75aa53fa3949, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3388412462888590027, guid: c217ae5b9d2db1b42bad75aa53fa3949, type: 3}
       propertyPath: m_SortingOrder
       value: 10
@@ -253,7 +261,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912263405929905842, guid: c217ae5b9d2db1b42bad75aa53fa3949, type: 3}
       propertyPath: m_Color.a
-      value: 0.19607843
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912263405929905844, guid: c217ae5b9d2db1b42bad75aa53fa3949, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4912263406478312717, guid: c217ae5b9d2db1b42bad75aa53fa3949, type: 3}
       propertyPath: m_LocalPosition.x

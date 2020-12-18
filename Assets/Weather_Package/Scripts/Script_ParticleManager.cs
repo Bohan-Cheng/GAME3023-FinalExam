@@ -16,7 +16,7 @@ public class Script_ParticleManager : MonoBehaviour
 
     public void UpdateWeather(EWeather weather, EWeather last)
     {
-
+        WS.IsPlaying = true;
         switch (weather)
         {
             case EWeather.Sunny:
@@ -35,7 +35,7 @@ public class Script_ParticleManager : MonoBehaviour
                 break;
             case EWeather.Snow:
                 StopAllParticles(last);
-                WS.anim.Play("Anim_SnowRainStart");
+                Invoke("StartSnow", 5.0f);
                 break;
         }
     }
@@ -55,9 +55,14 @@ public class Script_ParticleManager : MonoBehaviour
         WS.anim.Play("Anim_lightRainStart");
     }
 
-    void StopAllParticles(EWeather weather)
+    void StartSnow()
     {
         WS.IsPlaying = true;
+        WS.anim.Play("Anim_SnowStart");
+    }
+
+    void StopAllParticles(EWeather weather)
+    {
         switch (weather)
         {
             case EWeather.Sunny:
