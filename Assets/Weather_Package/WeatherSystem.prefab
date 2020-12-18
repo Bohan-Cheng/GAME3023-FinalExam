@@ -1,5 +1,77 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &569174608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569174609}
+  - component: {fileID: 569174610}
+  m_Layer: 0
+  m_Name: Lightning
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &569174609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569174608}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8593368844623984735}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &569174610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569174608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 4
+  m_BlendStyleIndex: 2
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 1
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &8593368843678929455
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,6 +143,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &980771295
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8593368844623984734}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a4b54e8b4f3fda74aa113c315bdc1bd2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &194257561474576271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82,6 +173,26 @@ PrefabInstance:
       propertyPath: WS
       value: 
       objectReference: {fileID: 286844485}
+    - target: {fileID: 8499386880995576288, guid: 2754dfc92ee2d154ab60b746ddadf9bb, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499386880995576288, guid: 2754dfc92ee2d154ab60b746ddadf9bb, type: 3}
+      propertyPath: m_LightVolumeOpacity
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499386880995576294, guid: 2754dfc92ee2d154ab60b746ddadf9bb, type: 3}
+      propertyPath: TimeSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499386880995576294, guid: 2754dfc92ee2d154ab60b746ddadf9bb, type: 3}
+      propertyPath: MinIntensity
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499386880995576294, guid: 2754dfc92ee2d154ab60b746ddadf9bb, type: 3}
+      propertyPath: MaxIntensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8499386881041536976, guid: 2754dfc92ee2d154ab60b746ddadf9bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -130,8 +241,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8499386882418222281, guid: 2754dfc92ee2d154ab60b746ddadf9bb, type: 3}
+      propertyPath: TimeSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499386882418222281, guid: 2754dfc92ee2d154ab60b746ddadf9bb, type: 3}
+      propertyPath: MinIntensity
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499386882418222281, guid: 2754dfc92ee2d154ab60b746ddadf9bb, type: 3}
+      propertyPath: MaxIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499386882418222283, guid: 2754dfc92ee2d154ab60b746ddadf9bb, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499386882418222283, guid: 2754dfc92ee2d154ab60b746ddadf9bb, type: 3}
+      propertyPath: m_LightVolumeOpacity
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2754dfc92ee2d154ab60b746ddadf9bb, type: 3}
+--- !u!1 &8593368844623984734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8499386881041536977, guid: 2754dfc92ee2d154ab60b746ddadf9bb, type: 3}
+  m_PrefabInstance: {fileID: 194257561474576271}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8593368844623984735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8499386881041536976, guid: 2754dfc92ee2d154ab60b746ddadf9bb, type: 3}
@@ -417,6 +553,10 @@ PrefabInstance:
       propertyPath: WS
       value: 
       objectReference: {fileID: 286844485}
+    - target: {fileID: 3028767892178460019, guid: cec44808e61dadd4f94b2461620e581c, type: 3}
+      propertyPath: LightningAnim
+      value: 
+      objectReference: {fileID: 980771295}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cec44808e61dadd4f94b2461620e581c, type: 3}
 --- !u!4 &6722078976512419719 stripped

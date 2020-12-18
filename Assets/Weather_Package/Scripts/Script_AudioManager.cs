@@ -21,6 +21,8 @@ public class Script_AudioManager : MonoBehaviour
     [SerializeField] AudioClip clip_FarTunder;
     [SerializeField] Script_WeatherSystem WS;
 
+    [SerializeField] Animator LightningAnim;
+
     Script_AudioManager instance;
     void Awake()
     {
@@ -38,9 +40,13 @@ public class Script_AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!IsInvoking() && WS.Weather == EWeather.Strom)
+        if(Input.GetKeyDown(KeyCode.T))
         {
-            int RandSec = Random.Range(10, 30);
+            PlayThunder();
+        }
+        if (!IsInvoking() && WS.Weather == EWeather.Strom)
+        {
+            int RandSec = Random.Range(8, 15);
             Invoke("PlayThunder", RandSec);
         }
         else if(IsInvoking() && WS.Weather != EWeather.Strom)
@@ -51,6 +57,7 @@ public class Script_AudioManager : MonoBehaviour
 
     void PlayThunder()
     {
+        LightningAnim.SetTrigger("Thunder");
         ThunderAudio.Play();
     }
 
