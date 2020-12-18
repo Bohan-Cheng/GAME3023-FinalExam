@@ -40,6 +40,24 @@ public class Script_ParticleManager : MonoBehaviour
         }
     }
 
+    void StopAllParticles(EWeather weather)
+    {
+        switch (weather)
+        {
+            case EWeather.Sunny:
+                WS.anim.Play("Anim_SunnyEnd");
+                break;
+            case EWeather.Rainy:
+                WS.anim.Play("Anim_lightRainEnd");
+                break;
+            case EWeather.Strom:
+                WS.anim.Play("Anim_StormEnd");
+                break;
+            case EWeather.Snow:
+                WS.anim.Play("Anim_SnowEnd");
+                break;
+        }
+    }
     void StartSunny()
     {
         if (Sunlight.IsDayTime())
@@ -61,22 +79,4 @@ public class Script_ParticleManager : MonoBehaviour
         WS.anim.Play("Anim_SnowStart");
     }
 
-    void StopAllParticles(EWeather weather)
-    {
-        switch (weather)
-        {
-            case EWeather.Sunny:
-                WS.anim.Play("Anim_SunnyEnd");
-                break;
-            case EWeather.Rainy:
-                WS.anim.Play("Anim_lightRainEnd");
-                break;
-            case EWeather.Strom:
-                WS.anim.Play("Anim_StormEnd");
-                break;
-            case EWeather.Snow:
-                WS.anim.Play("Anim_SnowEnd");
-                break;
-        }
-    }
 }

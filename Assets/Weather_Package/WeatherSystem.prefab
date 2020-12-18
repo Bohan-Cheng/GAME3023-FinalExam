@@ -122,6 +122,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   ParticleMana: {fileID: 3704803217204769120}
   AudioMana: {fileID: 6722078976512419718}
+  MinTime: 10
+  MaxTime: 50
   IsPlaying: 0
   Weather: 0
 --- !u!95 &3762538275480029302

@@ -31,28 +31,15 @@ public class Script_AudioManager : MonoBehaviour
         else { Destroy(this); }
     }
 
-        // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.T))
-        {
-            PlayThunder();
-        }
-        if (!IsInvoking() && WS.Weather == EWeather.Strom)
-        {
-            int RandSec = Random.Range(8, 15);
-            Invoke("PlayThunder", RandSec);
-        }
-        else if(IsInvoking() && WS.Weather != EWeather.Strom)
-        {
-            CancelInvoke();
-        }
+        if(Input.GetKeyDown(KeyCode.T)) { PlayThunder(); }
+
+        if (!IsInvoking() && WS.Weather == EWeather.Strom) 
+        { Invoke("PlayThunder", Random.Range(8, 15)); }
+        else if(IsInvoking() && WS.Weather != EWeather.Strom) 
+        { CancelInvoke(); }
     }
 
     void PlayThunder()
@@ -66,17 +53,14 @@ public class Script_AudioManager : MonoBehaviour
         switch (weather)
         {
             case EWeather.Sunny:
-                StopAllAudio();
                 AmbientAudio.clip = clip_birds;
                 AmbientAudio.Play();
                 break;
             case EWeather.Rainy:
-                StopAllAudio();
                 RainAudio.clip = clip_lightRian;
                 RainAudio.Play();
                 break;
             case EWeather.Strom:
-                StopAllAudio();
                 AmbientAudio.clip = clip_wind;
                 OtherAudio.clip = clip_HeavyRian;
                 ThunderAudio.clip = clip_FarTunder;
@@ -84,18 +68,10 @@ public class Script_AudioManager : MonoBehaviour
                 OtherAudio.Play();
                 break;
             case EWeather.Snow:
-                StopAllAudio();
                 OtherAudio.clip = clip_snowWind;
                 OtherAudio.Play();
                 break;
         }
     }
 
-    void StopAllAudio()
-    {
-        //AmbientAudio.Stop();
-        //RainAudio.Stop();
-        //ThunderAudio.Stop();
-        //OtherAudio.Stop();
-    }
 }
